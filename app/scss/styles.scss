@@ -1,7 +1,54 @@
 @import "variables";
 
 // styles.scss
-.testing {
-    background: $color-red;
-    width: percentage(5/7);
+
+body {
+    background: $base-black;
+    font-size: 1.4rem;
+    color: $base-pink;
+    font-weight: bold;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.index-header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: $base-black;
+}
+
+.index-header nav {
+    height: 100%;
+    width: 80%;
+    font-size: 1rem;
+    margin: 0 auto 0 auto;
+}
+
+.index-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.index-header li {
+}
+
+.index-section {
+    padding-top: 50px;
+}
+
+main {
+    margin: 50px 10% 10% 10%;
+}
+
+@media (min-width: $breakpoint-tablet) {
 }
