@@ -1,0 +1,60 @@
+@import "_variables-mixins";
+
+.index-header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: $base-black;
+    @media (min-width: $breakpoint-desktop) {
+        background: transparent;
+    }
+}
+
+.index-header-nav {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    @media (min-width: $breakpoint-desktop) {
+        width: 60%;
+    }
+}
+
+.index-header-nav-list {
+    @include neon-glow-pink();
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: 1rem;
+    @media (max-width: $breakpoint-old-iphone) {
+        font-size: 0.9rem;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 1.5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        color: $big-base-yellow;
+        background-color: transparent;
+    }
+}
+
+.index-header-links:link,
+.index-header-links:visited {
+    color: $base-white;
+    text-decoration: none;
+    @media (min-width: $breakpoint-desktop) {
+        color: $big-base-yellow;
+        text-shadow: none;
+    }
+}
+
+.index-header-links:hover,
+.index-header-links:active {
+    color: white;
+    @include neon-glow-yellow();
+    border-bottom: 1px solid $base-yellow;
+    padding-bottom: 1px;
+}

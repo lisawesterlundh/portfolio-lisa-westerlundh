@@ -1,54 +1,219 @@
-@import "variables";
+@import "_reset";
+@import "_variables-mixins";
+@import "_index-header";
 
-// styles.scss
-
-body {
+.index-body {
     background: $base-black;
-    font-size: 1.4rem;
-    color: $base-pink;
-    font-weight: bold;
-    font-family: "Nunito Sans", sans-serif;
-    padding: 0;
-    margin: 0;
+    font-size: 1.3rem;
+    font-family: "Lato", sans-serif;
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: $breakpoint-old-iphone) {
+        font-size: 1rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        background-image: url("../images/happy-smiley.jpeg");
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-position: right top;
+        color: $big-base-peach;
+        font-family: "Questrial", sans-serif;
+        text-shadow: none;
+    }
 }
 
-.index-header {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    height: 50px;
-    width: 100%;
-    background: $base-black;
-}
+.toggle-button {
+    display: none;
+    @media (min-width: $breakpoint-desktop) {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        background-color: $big-base-light-purple;
+        color: $big-base-peach;
+        position: fixed;
+        z-index: 1;
+        margin: 100px;
+        border: none;
+        border-radius: 50%;
+        font-size: 1rem;
+        font-family: "Questrial", sans-serif;
+        outline: none;
+        cursor: pointer;
+    }
 
-.index-header nav {
-    height: 100%;
-    width: 80%;
-    font-size: 1rem;
-    margin: 0 auto 0 auto;
-}
+    &:visited {
+        background-color: $big-base-light-purple;
+        color: $big-base-peach;
+    }
 
-.index-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
+    &:hover {
+        background-color: $big-base-peach;
+        color: $big-base-purple;
+    }
 
-.index-header li {
+    &:active {
+        background-color: $base-orange;
+    }
+
+    &:focus {
+        border: 3px solid $big-base-yellow;
+    }
 }
 
 .index-section {
-    padding-top: 50px;
+    color: $base-blue;
+
+    padding-top: 100px;
+    font-weight: 300;
+    width: 100%;
+    @media (max-width: $breakpoint-old-iphone) {
+        padding-top: 80px;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        padding-top: 150px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        height: calc(100vh - 49px);
+    }
 }
 
-main {
-    margin: 50px 10% 10% 10%;
+.index-section-start {
+    @media (min-width: $breakpoint-desktop) {
+        background-color: $big-base-blue-trans;
+        color: $big-base-peach;
+    }
+
+    h1 {
+        @media (min-width: $breakpoint-desktop) {
+            color: $big-base-pink;
+        }
+    }
 }
 
-@media (min-width: $breakpoint-tablet) {
+.index-section-skills {
+    @media (min-width: $breakpoint-desktop) {
+        background-color: $big-base-pink-trans;
+        color: $big-base-blue;
+    }
+    h1 {
+        @media (min-width: $breakpoint-desktop) {
+            color: $big-base-purple;
+        }
+    }
+}
+
+.index-section-contact {
+    height: 100vh;
+    @media (min-width: $breakpoint-desktop) {
+        background-color: $big-base-purple-trans;
+        color: $big-base-pink;
+        height: calc(100vh - 180px);
+    }
+    h1 {
+        @media (min-width: $breakpoint-desktop) {
+            color: $big-base-peach;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+.index-mainheadings {
+    @include neon-glow-pink();
+    font-size: 2.5rem;
+    text-align: center;
+    @media (max-width: $breakpoint-old-iphone) {
+        font-size: 2.5rem;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 6rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        font-size: 5rem;
+        text-shadow: none;
+    }
+}
+
+.index-main-links:link,
+.index-main-links:visited {
+    color: $base-blue;
+    text-decoration: underline;
+    @media (min-width: $breakpoint-desktop) {
+        color: $big-base-pink;
+        text-shadow: none;
+    }
+}
+
+.index-main-links:hover,
+.index-main-links:active {
+    color: white;
+    @include neon-glow-yellow;
+    color: $base-yellow;
+}
+
+.index-secondaryheadings {
+    font-size: 1.5rem;
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 2.2rem;
+    }
+}
+
+.index-footer {
+    height: 30px;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+    @include neon-glow-pink();
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 1.5rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        background: $big-base-purple-trans;
+        text-shadow: none;
+        color: $big-base-yellow;
+    }
+}
+
+.index-standout-text-big {
+    @include neon-glow-pink();
+    font-size: 2rem;
+    @media (max-width: $breakpoint-old-iphone) {
+        font-size: 1.5rem;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 3rem;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        color: $big-base-pink;
+        text-shadow: none;
+    }
+}
+
+.index-sections-containers {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    @media (min-width: $breakpoint-desktop) {
+        margin: auto;
+        width: 60%;
+    }
+}
+
+.index-sections-containers-skills-container {
+    @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.picture-toggle {
+    @media (min-width: $breakpoint-desktop) {
+        background-image: url("../images/upsidedown-smiley.png");
+    }
 }

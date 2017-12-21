@@ -1,0 +1,37 @@
+$base-pink: #ff6698;
+$base-orange: #ffb366;
+$base-yellow: #ffff66;
+$base-green: #98ff66;
+$base-blue: #6698ff;
+$base-black: black;
+$base-white: white;
+
+$big-base-pink: #f67280;
+$big-base-peach: #f8b195;
+$big-base-blue: #355c7d;
+$big-base-purple: #6c5b7b;
+$big-base-light-purple: #c06c84;
+$big-base-black-trans: rgba(22, 38, 51, 0.96);
+$big-base-white: white;
+$big-base-blue-trans: rgba(53, 92, 125, 0.96);
+$big-base-pink-trans: rgba(246, 114, 128, 0.96);
+$big-base-purple-trans: rgba(108, 91, 123, 0.96);
+$big-base-yellow: #ffff66;
+
+@mixin neon-glow-pink {
+    color: $base-white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px $base-pink,
+        0 0 30px $base-pink, 0 0 40px $base-pink, 0 0 55px $base-pink,
+        0 0 75px $base-pink;
+}
+
+@mixin neon-glow-yellow {
+    color: $base-white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px $base-yellow,
+        0 0 30px $base-yellow, 0 0 40px $base-yellow, 0 0 55px $base-yellow,
+        0 0 75px $base-yellow;
+}
+
+$breakpoint-tablet: 767px;
+$breakpoint-desktop: 1023px;
+$breakpoint-old-iphone: 321px; /* max-width for this one since it only applies to some font-sizes and one case of padding*/

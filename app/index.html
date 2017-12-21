@@ -4,116 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Portfolio</title>
+    <title>Lisa Westerlundh Portfolio</title>
     <meta name="author" content="Lisa Westerlundh">
     <meta name="description" content="Spana in min portfolio! Jag är en blivande frontend-utvecklare från Stockholm som tar markup på allvar!">
-    <meta name="keywords" content="front end portfolio">
+    <meta name="keywords" content="frontend">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="icon" type="image/gif" href="images/animated_favicon1.gif">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
+    <link rel=" stylesheet " href="css/styles.css" type="text/css">
 </head>
 
-<body>
+<body class="index-body" id="body-id">
 
     <header class="index-header">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#index-start" class="header-navigation">Start</a>
+        <nav class="index-header-nav">
+            <ul class="index-header-nav-list">
+                <li class="index-header-nav-list-item">
+                    <a href="#index-start" class="index-header-links">Start</a>
                 </li>
-                <li>
-                    <a href="#index-skills" class="header-navigation">Vad kan jag?</a>
+                <li class="index-header-nav-list-item">
+                    <a href="#index-skills" class="index-header-links">Kunskaper</a>
                 </li>
-                <li>
-                    <a href="#index-about" class="header-navigation">Utbildning</a>
-                </li>
-                <li>
-                    <a href="#index-contact" class="header-navigation">Kontakt</a>
+                <li class="index-header-nav-list-item">
+                    <a href="#index-contact" class="index-header-links">Kontakt</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="index-main">
 
-        <section class="index-section" id="index-start">
-            <div class="index-h1">
-                <h1>
+        <button class="toggle-button" onclick="toggleFunction()">Klicka!</button>
+
+        <section class="index-section index-section-start" id="index-start">
+
+            <div class="index-sections-containers">
+                <h1 class="index-mainheadings ">
                     Hej!
                 </h1>
+                <p>Jag heter Lisa och är en blivande
+                    <span class="index-standout-text-big">Frontendutvecklare</span> bosatt i Stockholm.</p>
+
+                <p>Sen hösten 2017 pluggar jag på KYH:s två-åriga utbildning
+                    <a href="http://kyh.se/project/front-end-developer/ " class="index-main-links"> Front End Developer</a>. Den fokuserar på Javascript och HTML/CSS men jag lär mig även backend med LAMP,
+                    och arbetsmetodik som Git och SCRUM.
+                </p>
+
+                <p>2018 kommer jag att göra min
+                    <a href="https://www.myh.se/Verksamhetsomraden/Yrkeshogskolan/For-utbildningsanordnare/LIA-Larande-i-arbete/" class="index-main-links ">LIA</a>, så
+                    <a href="mailto:lisawesterlundh@gmail.com " class="index-main-links ">hör av dig</a>
+                    om du letar efter en engagerad praktikant som gillar responsivitet, semantisk markup och lättläst kod!
+                </p>
             </div>
 
-            <p>Jag heter Lisa och är en blivande
-                <span>Frontendutvecklare</span> bosatt i Stockholm.</p>
-            <p>2018 kommer jag att göra min
-                <a href="https://www.myh.se/Verksamhetsomraden/Yrkeshogskolan/For-utbildningsanordnare/LIA-Larande-i-arbete/">LIA</a>, så
-                <a href="mailto:lisawesterlundh@gmail.com">kontakta mig</a> om du letar efter en engagerad praktikant med stort intresse för responsivitet, semantisk
-                markup och snygg, läsbar kod!</p>
 
         </section>
+        <section class="index-section index-section-skills" id="index-skills">
+            <div class="index-sections-containers index-sections-containers-skills">
 
-        <section class="index-section" id="index-skills">
-            <div class="index-h1">
-                <h1>
+                <h1 class="index-mainheadings">
                     Kunskaper
                 </h1>
+
+                <div class="index-sections-containers-skills-container">
+                    <div class="index-sections-containers-skills-container-child">
+                        <h2 class="index-secondaryheadings">Det här kan jag en del om:</h2>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3/SASS</li>
+                            <li>Javascript</li>
+                            <li>Git/Git Workflow</li>
+                            <li>Scrum</li>
+                        </ul>
+                    </div>
+                    <div class="index-sections-containers-skills-container-child">
+                        <h2 class="index-secondaryheadings">
+                            ...och det här lär jag mig nu:
+                        </h2>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>LAMP</li>
+                            <li>React.js</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="skills-section-container">
-                <h2>Det här kan jag:</h2>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3/SASS</li>
-                    <li>Javascript</li>
-                    <li>Git/Git Workflow</li>
-                    <li>Scrum</li>
-                </ul>
-            </div>
-            <div class="skills-section-container">
-                <h2>
-                    ...och det här lär jag mig nu:
-                </h2>
-                <ul>
-                    <li>Node.js/npm</li>
-                    <li>LAMP</li>
-                    <li>React.js</li>
-                    <li>Bootstrap</li>
-                </ul>
         </section>
 
-        <section class="index-section" id="index-about">
-            <div class="index-h1">
-                <h1>
-                    Om min utbildning
-                </h1>
-            </div>
-            <p>Sen hösten 2017 pluggar jag på
-                <a href="http://kyh.se/project/front-end-developer/">KYH:s två-åriga utbildning Front End Developer</a>.
-            </p>
-            <p> Utbildningen fokuserar på Javascript och HTML/CSS men jag lär mig även backend med LAMP, och arbetsmetodik som
-                Git och SCRUM.
-            </p>
-            <p></p>
-        </section>
-
-        <section class="index-section" id="index-contact">
-            <div class="index-h1">
-                <h1>
+        <section class="index-section index-section-contact" id="index-contact">
+            <div class="index-sections-containers">
+                <h1 class="index-mainheadings">
                     Kontakt
                 </h1>
+
+                <p>
+                    <a href="mailto:lisawesterlundh@gmail.com" class="index-main-links">lisawesterlundh@gmail.com</a>
+                </p>
+
             </div>
-            E-mail:
-            <a href="mailto:lisawesterlundh@gmail.com">lisawesterlundh@gmail.com</a>
-            <p>Telefon:
-                <a href="tel:+46736401259">073 640 12 59</a>
-            </p>
+
         </section>
 
-        <footer>
-            <p>Copyright 2017 Lisa Westerlundh</p>
-        </footer>
-
     </main>
+
+    <footer class="index-footer">
+        <p class="index-standout-text-small">Copyright 2017 Lisa Westerlundh</p>
+    </footer>
+
+    <script src="js/toggle.js"></script>
 
 </body>
 
